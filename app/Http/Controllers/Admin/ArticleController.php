@@ -61,6 +61,12 @@ class ArticleController extends Controller
     		return redirect()->back()->withInput()->withErrors('修改失败!!');
     	}
     }
+
+    public function destroy($id)
+    {
+    	Article::find($id)->delete($id);
+    	return redirect()->back()->withInput()->withErrors('删除成功!!');
+    }
 }
 
 
