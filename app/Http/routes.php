@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// 
+Route::get('/', 'HomeController@index');
 
 Route::get('/now', function () {
 	return date("Y-m-d H:i:s");
@@ -21,4 +23,4 @@ Route::get('/now', function () {
 
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
+// Route::get('/home', 'HomeController@index');
