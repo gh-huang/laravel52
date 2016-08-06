@@ -18,6 +18,7 @@
 Route::get('/', 'HomeController@index');
 
 Route::get('/article/{id}', 'ArticleController@show');
+Route::post('comment', 'CommentController@store');
 
 Route::get('/now', function () {
 	return date("Y-m-d H:i:s");
