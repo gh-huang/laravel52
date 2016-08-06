@@ -20,12 +20,21 @@ class CommentController extends Controller
     	return view('admin/comment/edit')->withComment(Comment::find($id));
     }
 
-    // public function update(Request $request, $id)
-    // {
-    // 	$this->validate($request, [
-    // 		'nickname' => 'required|unique:comments,nickname,'.$id.'|max:10',
-    // 		'email' => 'required|unique:comments,email,'.$id.'|max:256',
-    // 		'website' => 'required|unique:comments,website,'.$id.'|max:256',
-    // 		])
-    // }
+    public function update(Request $request, $id)
+    {
+    	$this->validate($request, [
+    		'nickname' => 'required',
+    		'content' => 'required',
+    	]);
+
+    	$comment = Comment::find($id);
+    	$comment->nickname = $request->get('nickname');
+    	$comment->content = $request->get('content');
+
+    	if ($comment->save()) {
+    	 	return redirect('/admin/comment');
+    	} else {
+    		return redirect()->back()->withInput()->withErrors('修改失败!!');
+    	} 
+    }
 }

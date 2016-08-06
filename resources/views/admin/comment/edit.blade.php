@@ -23,14 +23,14 @@
           <form action="{{ URL('admin/comment/'.$comment->id) }}" method="POST">
             {{ method_field('PATCH') }}
             {!! csrf_field() !!}
-            <input type="hidden" name="article_id" value="{{ $comment->article_id }}">
-            Nickname: <input type="text" name="nickname" class="form-control" required="required" value="{{ $comment->nickname }}">
+            <input type="hidden" name="article_id" value="{{ $comment->article_id }}" />
+            Nickname: <input type="text" name="nickname" class="form-control" required="required" value="{{ $comment->nickname }}" />
             <br>
             Email:
-            <input type="text" name="email" class="form-control" required="required" value="{{ $comment->email }}">
+            <input type="text" name="email" class="form-control" required="required" value="{{ $comment->email }}" />
             <br>
             Website:
-            <input type="text" name="website" class="form-control" required="required" value="{{ $comment->website }}">
+            <input type="text" name="website" class="form-control" required="required" value="{{ $comment->website }}" />
             <br>
             Content:
             <textarea name="content" rows="10" class="form-control" required="required">{{ $comment->content }}</textarea>
