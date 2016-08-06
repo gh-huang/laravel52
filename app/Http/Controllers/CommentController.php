@@ -11,6 +11,10 @@ class CommentController extends Controller
 {
     public function store(Request $request)
     {
+    	$this->validate($request, [
+    		'nickname' => 'required',
+    		'content' => 'required'
+    	]);
     	if (Comment::create($request->all())) {
     		return redirect()->back();
     	} else {

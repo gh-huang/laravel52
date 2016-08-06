@@ -30,6 +30,7 @@ Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin
 	Route::get('/', 'HomeController@index');
 	// Route::get('article', 'ArticleController@index');
 	Route::resource('article', 'ArticleController');
+	Route::resource('comment', 'CommentController');
 });
 
 // Route::get('/home', 'HomeController@index');
