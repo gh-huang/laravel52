@@ -17,6 +17,8 @@
 // 
 Route::get('/', 'HomeController@index');
 
+Route::get('/article/{id}', 'ArticleController@show');
+
 Route::get('/now', function () {
 	return date("Y-m-d H:i:s");
 });
