@@ -22,7 +22,7 @@
 
           <form action="{{ URL('admin/comment/'.$comment->id) }}" method="POST">
             {{ method_field('PATCH') }}
-            {!! csrf_field() !!}
+            {{ csrf_field() }}
             <input type="hidden" name="article_id" value="{{ $comment->article_id }}" />
             Nickname: <input type="text" name="nickname" class="form-control" required="required" value="{{ $comment->nickname }}" />
             <br>

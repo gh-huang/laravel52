@@ -33,7 +33,7 @@
                 {{ $comment->email }}
               </td>
               <td class="col-lg-4">
-                <a href="{{ URL('pages/'.$comment->page_id) }}" target="_blank">
+                <a href="{{ URL('article/'.$comment->article_id) }}" target="_blank">
                   {{ App\Article::find($comment->article_id)->title }}
                 </a>
               </td>
@@ -42,8 +42,8 @@
               </td>
               <td class="col-lg-1">
                 <form action="{{ URL('admin/comment/'.$comment->id) }}" method="POST" style="display: inline;">
-                  <input name="_method" type="hidden" value="DELETE">
-                  <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                  {{ method_field('DELETE') }}
+                  {{ csrf_field() }}
                   <button type="submit" class="btn btn-danger">删除</button>
                 </form>
               </td>
