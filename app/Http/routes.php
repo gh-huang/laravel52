@@ -34,3 +34,8 @@ Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin
 });
 
 // Route::get('/home', 'HomeController@index');
+
+//learn blade
+Route::group(['namespace' => 'Blade'], function () {
+	Route::get('extends', 'BladeController@extends');
+});
