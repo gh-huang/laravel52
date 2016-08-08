@@ -1,3 +1,3 @@
-Hello, {{ $name }}
+Hello, {{ $name or 'default' }}
 <hr>
 {{ time() }}
