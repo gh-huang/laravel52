@@ -13,4 +13,9 @@ class BladeController extends Controller
     {
     	return view('blade/child');
     }
+
+    public function data()
+    {
+    	return view('blade/data', ['name' => 'Huang']);
+    }
 }

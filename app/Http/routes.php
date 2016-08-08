@@ -38,4 +38,5 @@ Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin
 //learn blade
 Route::group(['namespace' => 'Blade'], function () {
 	Route::get('extends', 'BladeController@extends');
+	Route::get('data', 'BladeController@data');
 });
