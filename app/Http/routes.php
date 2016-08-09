@@ -33,7 +33,6 @@ Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin
 	Route::resource('comment', 'CommentController');
 });
 
-// Route::get('/home', 'HomeController@index');
 
 //learn blade
 Route::group(['namespace' => 'Blade'], function () {
