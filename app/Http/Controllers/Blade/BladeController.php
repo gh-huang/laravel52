@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 
 class BladeController extends Controller
 {
-    public function extends()
+    public function child()
     {
     	return view('blade/child');
     }

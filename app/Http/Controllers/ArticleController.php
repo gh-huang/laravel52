@@ -12,5 +12,7 @@ class ArticleController extends Controller
     public function show($id)
     {
     	return view('article/show')->withArticle(Article::with('hasManyComments')->find($id));
+    	// $comments = Article::find($id)->hasManyComments;
+    	// return view('article/show', ['article' => $comments]);
     }
 }

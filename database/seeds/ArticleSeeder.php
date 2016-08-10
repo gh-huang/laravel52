@@ -20,5 +20,8 @@ class ArticleSeeder extends Seeder
         		'user_id' => 1,
         	]);
         }
+        // factory('\App\Article', 10)->create()->each(function ($u) {
+        //     $u->posts()->save(factory('\App\Post')->make());
+        // });
     }
 }
