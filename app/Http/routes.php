@@ -38,3 +38,6 @@ Route::group(['namespace' => 'Blade'], function () {
 	Route::get('extends', 'BladeController@child');
 	Route::get('data', 'BladeController@data');
 });
+
+Route::get('redis', 'RedisController@redistest');
+Route
